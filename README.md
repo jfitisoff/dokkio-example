@@ -1,19 +1,21 @@
 # dokkio-example
 
 Contains two different implementations of the same UI tests:
-- Javascript implementation using webdriverio and mocha.
-- Ruby implementation using watir and rspec.
+- A Javascript implementation using webdriverio and mocha.
+- A Ruby implementation using watir and rspec.
 
 ## Javascript
+I used wdio to generate the scaffolding for the tests. There's probably some way
+to easily initialize selenium automatically but it didn't leap out at me.
 
-```
-java -jar -Dwebdriver.chrome.driver=./chromedriver 
-./node_modules/.bin/wdio wdio.conf.js
-```
-selenium-server-standalone-3.5.3.jar
-npm install webdriverio --save-dev
-npm install selenium-standalone --save-dev
+- Start selenium server at the repo root: `java -jar -Dwebdriver.chrome.driver=./chromedriver selenium-server-standalone-3.5.3.jar`
+- cd into the `javascript` folder
+- Use wdio to run: `./node_modules/.bin/wdio wdio.conf.js`
 
-npm install
-java -jar -Dwebdriver.gecko.driver=./geckodriver selenium-server-standalone-3.5.3.jar
-./node_modules/.bin/wdio wdio.conf.js
+## Ruby
+No need to manually start selenium (it's built into the Ruby selenium bindings.)
+
+- Install Ruby (I'm currently using 2.5.1.)
+- gem install bundler.
+- cd into the `ruby` folder and run `bundle install`
+- Use rspec to run: `rspec spec/home_spec.rb`
