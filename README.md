@@ -4,6 +4,8 @@ Contains two different implementations of the same UI tests:
 - A Javascript implementation using webdriverio and mocha.
 - A Ruby implementation using watir and rspec.
 
+Both sets of tests are passing locally.
+
 ## Javascript
 I used wdio to generate the scaffolding for the tests. There's probably some way
 to easily initialize selenium automatically but it didn't leap out at me.
@@ -13,7 +15,8 @@ to easily initialize selenium automatically but it didn't leap out at me.
 - Use wdio to run: `./node_modules/.bin/wdio wdio.conf.js`
 
 ## Ruby
-No need to manually start selenium (it's built into the Ruby selenium bindings.)
+No need to manually start selenium server as long as chromedriver is somewhere
+on your path.
 
 - Install Ruby (I'm currently using 2.5.1.)
 - gem install bundler.
