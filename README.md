@@ -8,16 +8,14 @@ Both sets of tests are passing locally.
 
 ## Javascript
 I used wdio to generate the scaffolding for the tests. There's probably some way
-to easily initialize selenium automatically but it didn't leap out at me.
+to easily initialize selenium automatically but it didn't leap out at me and I
+ran out of time.
 
 - Start selenium server at the repo root: `java -jar -Dwebdriver.chrome.driver=./chromedriver selenium-server-standalone-3.5.3.jar`
 - cd into the `javascript` folder
 - Use wdio to run: `./node_modules/.bin/wdio wdio.conf.js`
 
 ## Ruby
-No need to manually start selenium server as long as chromedriver is somewhere
-on your path.
-
 - Install Ruby (I'm currently using 2.5.1.)
 - gem install bundler.
 - cd into the `ruby` folder and run `bundle install`
